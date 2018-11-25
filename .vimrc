@@ -22,6 +22,9 @@ imap <C-d> <BS>
 inoremap { {}<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
+inoremap {} {}<Left>
+inoremap () ()<Left>
+inoremap [] []<Left>
 "inoremap < <><Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
