@@ -2,11 +2,16 @@ syntax on
 "set smartindent
 set autoindent
 set tabstop=4
+set expandtab
 set shiftwidth=4
+set softtabstop=4
 set cursorline
 set number
 set nocompatible
 set whichwrap=b,s,<,>,[,]
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
