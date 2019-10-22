@@ -36,4 +36,15 @@ inoremap ' ''<Left>
 inoremap {<Enter> {}<Left><CR><ESC><S-o><Tab>
 inoremap [<Enter> []<Left><CR><ESC><S-o><Tab>
 inoremap (<Enter> ()<Left><CR><ESC><S-o><Tab>
+inoremap [; [];<Left><Left>
+inoremap (; ();<Left><Left>
+inoremap {<Right> {
+inoremap (<Right> (
+inoremap [<Right> [
 
+if !has('gui_running')
+    imap  <C-CR>
+    inoremap <C-CR> <End><CR>
+endif
+
+autocmd BufNewFile *.cpp 0r $HOME/.vim/cpp.txt
