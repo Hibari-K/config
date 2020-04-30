@@ -3,6 +3,12 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+
+bindkey '^J' self-insert
+
+# privent "zsh: no matched found" with '*' in command not for wildcard
+setopt +o nomatch
+
 # prevent from exiting with Ctrl-D
 setopt IGNOREEOF
 
@@ -21,7 +27,8 @@ zstyle ':completion:*:default' menu select=2
 setopt interactivecomments
 
 # prompt settings
-PROMPT="${fg[green]}%n@%m:%~${reset_color} %# "
+#PROMPT="${fg[green]}%n@%m:%~${reset_color} %# "
+PROMPT="${fg[green]}%n:%~${reset_color} %# "
 
 # ls color
 #export LSCOLORS=exfxcxdxbxegedabagacad
