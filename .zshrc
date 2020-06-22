@@ -20,8 +20,13 @@ zstyle ':completion:*:default' menu select=2
 # comment out with #
 setopt interactivecomments
 
+#
+unsetopt promptcr
+
 # prompt settings
-PROMPT="${fg[green]}%n@%m:%~${reset_color} %# "
+#PROMPT="${fg[green]}%n@%m:%~${reset_color} %# "
+# prevent prompt strings from disappearing
+PROMPT="%{${fg[green]}%n:%~$reset_color%} %# "
 
 # ls color
 #export LSCOLORS=exfxcxdxbxegedabagacad
