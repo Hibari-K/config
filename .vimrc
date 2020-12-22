@@ -10,8 +10,9 @@ set number
 set nocompatible
 set whichwrap=b,s,<,>,[,]
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
-set fileformats=unix,dos,mac
+set fileencoding=utf-8
+"set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+"set fileformats=unix,dos,mac
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
   \ exe "normal g`\"" | endif
@@ -47,4 +48,5 @@ if !has('gui_running')
     inoremap <C-CR> <End><CR>
 endif
 
-autocmd BufNewFile *.cpp 0r $HOME/.vim/cpp.txt
+"autocmd BufNewFile *.cpp 0r $HOME/.vim/cpp.txt
+autocmd BufEnter Makefile setlocal noexpandtab
