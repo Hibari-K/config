@@ -25,6 +25,8 @@ imap <C-j> <Down>
 imap <C-k> <Up>
 imap <C-l> <Right>
 imap <C-d> <BS>
+imap <C-e> <C-o>$
+imap <C-a> <C-o>^
 inoremap { {}<Left>
 inoremap ( ()<Left>
 inoremap [ []<Left>
