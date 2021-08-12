@@ -36,7 +36,7 @@ PROMPT="%{${fg[green]}%n:%~$reset_color%} %# "
 
 # ls color
 #export LSCOLORS=exfxcxdxbxegedabagacad
- export LSCOLORS=ExGxcxdxCxegedabagExEx
+export LSCOLORS=ExGxcxdxCxegedabagExEx
 alias ls='ls -G'
 
 alias cd..='cd ..'
